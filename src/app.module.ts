@@ -12,7 +12,7 @@ import { UserModule } from './user/user.module';
       type: 'mysql',
       host: 'localhost',
       port: 3306,
-      username: 'cobradb',
+      username: 'cobradb@4.188.107.169',
       password: 'Dasp-143',
       database: 'teamcobra;',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
