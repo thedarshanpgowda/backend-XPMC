@@ -1,17 +1,20 @@
 // src/auth/auth.controller.ts
-import { Controller, Post, Body, UnauthorizedException } from '@nestjs/common';
-import { AuthService } from './auth.service';
-import { LoginDto } from './login.dto';
+import { Controller, Post, Body, UnauthorizedException } from "@nestjs/common";
+import { AuthService } from "./auth.service";
+import { LoginDto } from "./login.dto";
 
-@Controller('auth')
+@Controller("auth")
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @Post('login')
+  @Post("login")
   async login(@Body() loginDto: LoginDto) {
-    console.log("within login controlled")
-    const user = await this.authService.validateUser(loginDto.email, loginDto.password);
-    console.log(user)
+    console.log(loginDto.email, loginDto.password);
+    const user = await this.authService.validateUser(
+      loginDto.email,
+      loginDto.password
+    );
+    console.log(user);
     if (!user) {
       throw new UnauthorizedException();
     }
