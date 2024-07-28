@@ -5,6 +5,7 @@ services:
     image: mysql:latest
     container_name: mysql_db
     environment:
+      MYSQL_ROOT_PASSWORD: Dasp-143
       MYSQL_DATABASE: teamcobra
       MYSQL_USER: cobradb
       MYSQL_PASSWORD: Dasp-143
