@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nestjs_backend
+    ports:
+      - "4000:4000"
+    environment:
+      DATABASE_HOST: cobra-db.mysql.database.azure.com
+      DATABASE_PORT: 3306
+      DATABASE_USERNAME: cobradb
+      DATABASE_PASSWORD: Dasp-143
+      DATABASE_NAME: teamcobra
+
+volumes:
