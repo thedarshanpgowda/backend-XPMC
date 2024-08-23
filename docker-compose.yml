@@ -28,7 +28,7 @@ services:
       DATABASE_PORT: 3306
       DATABASE_USERNAME: cobradb
       DATABASE_PASSWORD: 8431676017@Db
-      DATABASE_NAME: TeamCobra
+      DATABASE_NAME: cobradb
 
 volumes:
   mysql_data:
